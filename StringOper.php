@@ -150,7 +150,7 @@ print_r($revArr);
 echo '</pre>';
 
 //to find occurance of php and print
-echo '11] to find occurance of php and print => ';
+echo '13] to find occurance of php and print => ';
 $subString = strtok($stringOne, " ");              
     
     while ($subString !== false) {

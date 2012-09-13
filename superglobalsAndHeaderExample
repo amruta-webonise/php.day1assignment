@@ -1,0 +1,33 @@
+
+Answer 16
+
+There are some global variable declared in PHP.
+These are called as superglobals.
+They are listed as:
+
+1.$GLOBALS
+2.$_SERVER
+3.$_GET
+4.$_POST
+5.$_FILES
+6.$_COOKIE
+7.$_SESSION
+8.$_REQUEST
+9.$_ENV
+-------------------------------------------------------------------------------------------------------------------------------------
+Answer 17
+
+Header is used to send http header.
+It is used for re-direction.
+
+Header calls can be of two types. 
+It can either start with "http" or with "location".
+
+header("HTTP/1.0 404 Not Found");
+header("Location: http://www.google.com");
+
+<?php
+
+   header( 'Location: http://www.google.com' ) ;
+
+?>
