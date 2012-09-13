@@ -7,11 +7,24 @@ $stringTwo = "PHP does not require (or support) explicit type definition in vari
 
 //echo $stringTwo;
 
+
+
+//finding whether string occurs or not
+
 $subStr = 'PHP';
 $pos = strpos($stringOne, $subStr);
 
+if($pos !== false)
+{
+	echo 'PHP is present in string one. ';
+//displaying the position
+echo "The string $found is found in 1st string at index $pos";
+}
+else
+{
+	echo 'PHP is not present in string one';
+}
 
-echo "The string PHP is found in 1st string at index $pos";
 
 ?>
 
