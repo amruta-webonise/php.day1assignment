@@ -16,7 +16,7 @@ $pos = strpos($stringOne, $subStr);
 
 if($pos !== false)
 {
-	echo 'PHP is present in string one. ';
+	echo 'Answer 1], 2] PHP is present in string one. ';
 	//displaying the position
 	echo "The string $found is found in 1st string at index $pos.";
 }
@@ -28,12 +28,13 @@ else
 
 echo '<br/>';
 echo '<br/>';
-
+echo '<br/>';
+echo '<br/>';
 //splitting words into array
 
 $words = explode(" ", $stringOne);
 
-echo 'The Array of words are: ';
+echo '3] The Array of words are: ';
 echo '<pre>';
 print_r ($words); 
 echo '</pre>';
@@ -42,7 +43,7 @@ echo '<br/>';
 echo '<br/>';
 //capitalising the complete 1st string
 
-echo 'capitalised string is: ';
+echo '4] capitalised string is: ';
 $str = strtoupper($stringOne);
 echo $str;
 
@@ -52,8 +53,26 @@ echo '<br/>';
 //string concatenation
 
 $stringConcat = $stringOne.$stringTwo;
-echo "concatenated string is=> $stringConcat";
+echo "5] concatenated string is=> $stringConcat";
 
+echo '<br/>';
+echo '<br/>';
+echo '<br/>';
+echo '<br/>';
+
+//displaying strings one and two using heredoc
+echo "6] ";
+echo <<<HERE
+string one is "$stringOne". 
+<br/>
+<br/>
+string two is "$stringTwo". 
+HERE;
+
+echo '<br/>';
+echo '<br/>';
+echo '<br/>';
+echo '<br/>';
 ?>
 
 
