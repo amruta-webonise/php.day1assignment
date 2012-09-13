@@ -47,6 +47,12 @@ $str = strtoupper($stringOne);
 echo $str;
 
 
+echo '<br/>';
+echo '<br/>';
+//string concatenation
+
+$stringConcat = $stringOne.$stringTwo;
+echo "concatenated string is=> $stringConcat";
 
 ?>
 
