@@ -73,6 +73,33 @@ echo '<br/>';
 echo '<br/>';
 echo '<br/>';
 echo '<br/>';
+
+$totalLength = strlen($stringOne);
+$half = $totalLength/2;
+$fourParts= $half/2+1;
+
+$arr2 = str_split($str, $half);
+$firstHalf = $arr2[0];
+$secondHalf = $arr2[1];
+
+$firstTwoParts = str_split($firstHalf, $fourParts);
+$nextTwoParts = str_split($secondHalf, $fourParts);
+
+echo 'Four equal parts of 1st string are : ';
+echo '<br/>';
+
+echo "1st=> $firstTwoParts[0]";
+echo '<br/>';
+echo "2nd => $firstTwoParts[1]";
+echo '<br/>';
+echo "3rd => $nextTwoParts[0]";
+echo '<br/>';
+echo "4th => $nextTwoParts[1]";
+echo '<br/>';
+echo '<br/>';
+
+echo '<br/>';
+echo '<br/>';
 ?>
 
 
