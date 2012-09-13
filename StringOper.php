@@ -134,7 +134,11 @@ echo '<br/>';
 echo '12] string after removing html tags is => ';
 echo strip_tags($stringOne);
 
+echo '<br/>';
+echo '<br/>';
 
+echo '<br/>';
+echo '<br/>';
 //string after splitting at . and reversing =>
 echo '11] string after splitting at . and reversing => ';
 
@@ -146,17 +150,19 @@ print_r($revArr);
 echo '</pre>';
 
 //to find occurance of php and print
+echo '11] to find occurance of php and print => ';
+$subString = strtok($stringOne, " ");              
+    
+    while ($subString !== false) {
+    
+      if((strcmp($subString,"PHP"))==0)
+      {
+          echo "$subString found in string one";
+	  echo '<br/>';
+       }
+     $subString = strtok(" \n\t");
+    }
 
-$subString = strtok($stringOne, " ");
-
-while ($subString !== false) 
-{
-	if(strcmp($subString,'PHP')==0)
-	{
-		echo "$subString found in string one";
-		echo '<br/>';
-	}
-}
 
 ?>
 
