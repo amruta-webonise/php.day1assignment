@@ -26,14 +26,27 @@ else
 	echo 'PHP is not present in string one\n';
 }
 
+echo '<br/>';
+echo '<br/>';
 
 //splitting words into array
 
 $words = explode(" ", $stringOne);
 
+echo 'The Array of words are: ';
 echo '<pre>';
 print_r ($words); 
 echo '</pre>';
+
+echo '<br/>';
+echo '<br/>';
+//capitalising the complete 1st string
+
+echo 'capitalised string is: ';
+$str = strtoupper($stringOne);
+echo $str;
+
+
 
 ?>
 
