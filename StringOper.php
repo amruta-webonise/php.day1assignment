@@ -33,12 +33,24 @@ echo '<br/>';
 //splitting words into array
 
 $words = explode(" ", $stringOne);
+$i = 0;
 
+while($words[$i])
+$i++;
 echo '3] The Array of words are: ';
-echo '<pre>';
-print_r ($words); 
-echo '</pre>';
-
+PrintArray($i,$words);
+function PrintArray($i,$words)
+{
+  if($i<0) 
+      {
+         return;
+      }
+      else{
+           PrintArray(--$i,$words); 
+           echo " ";
+           echo $words[$i];
+        }
+}
 echo '<br/>';
 echo '<br/>';
 //capitalising the complete 1st string
@@ -63,10 +75,10 @@ echo '<br/>';
 //displaying strings one and two using heredoc
 echo "6] ";
 echo <<<HERE
-string one is "$stringOne". 
+string one is "$stringOne".
 <br/>
 <br/>
-string two is "$stringTwo". 
+string two is "$stringTwo".
 HERE;
 
 echo '<br/>';
@@ -85,7 +97,7 @@ $secondHalf = $arr2[1];
 $firstTwoParts = str_split($firstHalf, $fourParts);
 $nextTwoParts = str_split($secondHalf, $fourParts);
 
-echo 'Four equal parts of 1st string are : ';
+echo '10] Four equal parts of 1st string are : ';
 echo '<br/>';
 
 echo "1st=> $firstTwoParts[0]";
@@ -100,6 +112,21 @@ echo '<br/>';
 
 echo '<br/>';
 echo '<br/>';
+
+//Find the length of string 1 & 2
+
+$stringOneLength = strlen($stringOne);
+$stringTwoLength = strlen($stringTwo);
+echo "Length of string one is $stringOneLength";
+echo '<br/>';
+echo "Length of string two is $stringTwoLength";
+
+echo '<br/>';
+echo '<br/>';
+
+echo '<br/>';
+echo '<br/>';
+
 ?>
 
 
