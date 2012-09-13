@@ -1,5 +1,5 @@
 <?php
-$stringOne = 'PHP parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as PHP code. The parser then executes all of the code it finds until it runs into a PHP closing <br/> tag.';
+$stringOne = 'PHP parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as PHP code. The parser then executes all of the code it finds until it runs into a PHP closing <br/> tag';
 
 //echo $stringOne;
 
@@ -18,7 +18,9 @@ if($pos !== false)
 {
 	echo 'Answer 1], 2] PHP is present in string one. ';
 	//displaying the position
-	echo "The string $found is found in 1st string at index $pos.";
+	echo "The string $found is found in 1st string at index $pos. and occurs ";
+	echo substr_count($stringOne, 'PHP');
+	echo ' times';
 }
 
 else
@@ -117,7 +119,7 @@ echo '<br/>';
 
 $stringOneLength = strlen($stringOne);
 $stringTwoLength = strlen($stringTwo);
-echo "Length of string one is $stringOneLength";
+echo "answer 14] Length of string one is $stringOneLength";
 echo '<br/>';
 echo "Length of string two is $stringTwoLength";
 
@@ -126,6 +128,35 @@ echo '<br/>';
 
 echo '<br/>';
 echo '<br/>';
+
+//removing html tags
+
+echo '12] string after removing html tags is => ';
+echo strip_tags($stringOne);
+
+
+//string after splitting at . and reversing =>
+echo '11] string after splitting at . and reversing => ';
+
+$arr = explode(".", $stringOne);
+
+$revArr = array_reverse($arr);
+echo '<pre>';
+print_r($revArr);
+echo '</pre>';
+
+//to find occurance of php and print
+
+$subString = strtok($stringOne, " ");
+
+while ($subString !== false) 
+{
+	if(strcmp($subString,'PHP')==0)
+	{
+		echo "$subString found in string one";
+		echo '<br/>';
+	}
+}
 
 ?>
 

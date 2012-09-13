@@ -67,5 +67,11 @@ echo '<br/>';
 echo '<br/>';
 echo '<br/>';
 
+//printing 12th jan 2012
+
+echo 'Answer 8th] ';
+echo date("d \\t\h M Y", mktime(0, 0, 0, 1 , 12, 2012));
+
+
 ?>
 
