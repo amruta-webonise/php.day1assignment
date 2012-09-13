@@ -17,14 +17,23 @@ $pos = strpos($stringOne, $subStr);
 if($pos !== false)
 {
 	echo 'PHP is present in string one. ';
-//displaying the position
-echo "The string $found is found in 1st string at index $pos";
-}
-else
-{
-	echo 'PHP is not present in string one';
+	//displaying the position
+	echo "The string $found is found in 1st string at index $pos.";
 }
 
+else
+{
+	echo 'PHP is not present in string one\n';
+}
+
+
+//splitting words into array
+
+$words = explode(" ", $stringOne);
+
+echo '<pre>';
+print_r ($words); 
+echo '</pre>';
 
 ?>
 
